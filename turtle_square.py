@@ -1,8 +1,21 @@
 import turtle
 
 window = turtle.Screen()
-tortuga = tutle.Turtle()
+tortuga = turtle.Turtle()
 
-tortuga.forward(100)
+forward_value = 100
+grades = 90
+
+tortuga.forward(forward_value)
+tortuga.right(grades)
+
+tortuga.forward(forward_value)
+tortuga.right(grades)
+
+tortuga.forward(forward_value)
+tortuga.right(grades)
+
+tortuga.forward(forward_value)
+tortuga.right(grades)
 
 window.mainloop()
