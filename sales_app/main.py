@@ -57,7 +57,7 @@ def _get_client_name():
         if client_name == 'exit':
             break
     
-    if client_name == 'exit'
+    if client_name == 'exit':
         sys.exit()
         
     return client_name
