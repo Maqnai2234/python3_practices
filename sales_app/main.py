@@ -25,6 +25,15 @@ def delete_client(client_name):
     _replace_client(client_name, "") 
 
 
+def search_client(client_name):
+    global clients
+    clients_list = clients.split(',')
+    for client in clients_list:
+        if client  != client_name:
+            continue
+        else:
+            return true
+
 def _replace_client(client_name, string_replace):
     global clients
      
@@ -72,5 +81,12 @@ if __name__ == '__main__':
         updated_client_name = input('What is the updated client name ')
         update_client(client_name, updated_client_name)
         list_clients()
+    else command == 'S':
+        client_name = _get_client_name()
+        found = search_client(client_name)
+        if found:
+            print('The client is in the client\'s list')
+        else:
+            print('The client: {} is not our client\'s list'.format(client_name))
     else:
         print('Invalid command')
