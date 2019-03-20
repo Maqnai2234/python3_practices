@@ -54,6 +54,8 @@ def _get_client_name():
 
     while not client_name:
         client_name = input('What is the client name? ')
+        if client_name == 'exit':
+            break
 
     return client_name
 
