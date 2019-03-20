@@ -32,7 +32,7 @@ def search_client(client_name):
         if client  != client_name:
             continue
         else:
-            return true
+            return True
 
 def _replace_client(client_name, string_replace):
     global clients
@@ -60,6 +60,7 @@ def _print_welcome():
     print('[C]reate client')
     print('[U]pdate client')
     print('[D]elete client')
+    print('[S]earch client')
 
 
 if __name__ == '__main__':
@@ -81,12 +82,12 @@ if __name__ == '__main__':
         updated_client_name = input('What is the updated client name ')
         update_client(client_name, updated_client_name)
         list_clients()
-    else command == 'S':
+    elif command == 'S':
         client_name = _get_client_name()
         found = search_client(client_name)
         if found:
             print('The client is in the client\'s list')
         else:
-            print('The client: {} is not our client\'s list'.format(client_name))
+            print(f"The client: {client_name} is not our client\'s list")
     else:
         print('Invalid command')
